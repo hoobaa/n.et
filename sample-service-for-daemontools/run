@@ -1,0 +1,13 @@
+#!/bin/sh
+
+USERTMP=strobolights
+HOMETMP=/Users/${USERTMP}
+SERVICE=$(pwd)
+
+echo FUCK
+
+exec setuidgid ${USERTMP} env - \
+PATH=/bin:/usr/bin:/usr/local/bin:${HOMETMP}/workbox/usr/local/bin:/opt/local/bin \
+HOME=${HOMETMP}  \
+CCL_DEFAULT_DIRECTORY=${HOMETMP}/workbox/usr/local/ccl \
+ccl64 -l ${SERVICE}/run.lisp

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+USERTMP=strobolights
+
+# 10MB
+LOG_SIZE=10485760
+
+# rotate
+ROTATE=5
+
+exec 2>&1
+exec setuidgid ${USERTMP} \
+/usr/local/bin/multilog t s$LOG_SIZE n$ROTATE .
+
