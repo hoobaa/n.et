@@ -10,7 +10,3 @@ Below script may show you how to launch.
 
 	sample-service-for-daemontools/run.lisp
 
-License
--------
-
-    Public License.
