@@ -4,7 +4,7 @@ USERTMP=strobolights
 HOMETMP=/Users/${USERTMP}
 SERVICE=$(pwd)
 
-echo FUCK
+echo >>>
 
 exec setuidgid ${USERTMP} env - \
 PATH=/bin:/usr/bin:/usr/local/bin:${HOMETMP}/workbox/usr/local/bin:/opt/local/bin \
